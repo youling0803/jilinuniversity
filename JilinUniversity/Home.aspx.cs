@@ -32,37 +32,27 @@ namespace JilinUniversity
             List<menu> Admins = new List<menu>();  //usertypw=0 为管理员，显示管理员可以看的界面
             //*****************************************************************************
             //每次新建页面，在这个部分里面添加页面的相关信息，就可以显示出来了。
-            menu One = new menu();
-            One.menuName = "课题管理";
-            One.url = @"user/TopicManage.aspx";
-            User.Add(One);
+            menu UsrOne = new menu();
+            UsrOne.menuName = "课题管理";
+            UsrOne.url = @"user/TopicManage.aspx";
+            User.Add(UsrOne);
+            menu UsrTwo = new menu();
+            UsrTwo.menuName = "实验管理";
+            UsrTwo.url = @"user/ExperimentManage.aspx";
+            User.Add(UsrTwo);
+            menu UserThree = new menu();
+            UserThree.menuName = "成果管理";
+            UserThree.url = @"user/ResultManage.aspx";
+            User.Add(UserThree);
 
-            #region 示例
-            //menu One = new menu();
-            //One.menuName = "课题管理";
-            //One.url = @"admin/UserManage.aspx";
-            //Admins.Add(One);
-            //menu Two = new menu();
-            //Two.menuName = "实验管理";
-            //Two.url = @"admin/OrderManage.aspx";
-            //Admins.Add(Two);
-            //menu Three = new menu();
-            //Three.menuName = "成果管理";
-            //Three.url = @"New/ChooseOrder.aspx";
-            //User.Add(Three);
-            //menu Four = new menu();
-            //Four.menuName = "查看订单";
-            //Four.url = @"New/WatchOrder.aspx";
-            //User.Add(Four);
-            //menu Five = new menu();
-            //Five.menuName = "订单管理";
-            //Five.url = @"New/SelfOrderManage.aspx";
-            //Seller.Add(Five);
-            //menu Six = new menu();
-            //Six.menuName = "历史订单";
-            //Six.url = @"New/OrderHistory.aspx";
-            //User.Add(Six);
-            #endregion
+            menu MagOne = new menu();
+            MagOne.menuName = "用户管理";
+            MagOne.url = @"manager/UserManage.aspx";
+            Admins.Add(MagOne);
+            menu MagTwo = new menu();
+            MagTwo.menuName = "公告管理";
+            MagTwo.url = @"manager/NoticeManage.aspx";
+            Admins.Add(MagTwo);
 
             //******************************************************************************
 

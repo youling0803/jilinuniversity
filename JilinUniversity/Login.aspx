@@ -71,6 +71,9 @@
                                 <asp:Button ID="LoginBtn" runat="server" Text="登录" OnClick="LoginBtn_Click" Width="100px"
                                     Font-Size="Large"
                                     font-weight="500" />
+                                <asp:Button ID="LoginBtn2" runat="server" Text="管理员" OnClick="LoginBtn2_Click" Width="100px"
+                                    Font-Size="Large"
+                                    font-weight="500" />
                             </div>
                             <%-- <div style="float: right; text-align: center; vertical-align: middle; width: 50%"
                             class="login-div-footer">

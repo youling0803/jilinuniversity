@@ -21,5 +21,13 @@ namespace JilinUniversity
             Session["ID"] = 1;
             Response.Write("<script language='javascript'>window.location='Home.aspx'</script>");
         }
+
+        protected void LoginBtn2_Click(object sender, EventArgs e)
+        {
+            Session["UserType"] = 0;
+            Session["UserName"] = "JiLinUniversity";
+            Session["ID"] = 1;
+            Response.Write("<script language='javascript'>window.location='Home.aspx'</script>");
+        }
     }
 }
