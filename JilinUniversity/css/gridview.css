@@ -1,0 +1,12 @@
+﻿body {
+    font-family:Courier New;
+    font-size:10px;
+}
+
+
+.index_box
+{
+    margin-bottom:2%;
+    z-index:-1;
+    margin-bottom:100px;
+}

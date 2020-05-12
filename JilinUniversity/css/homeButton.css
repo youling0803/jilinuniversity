@@ -1,0 +1,32 @@
+﻿.position-top {
+    position:absolute;
+    top:35%;
+    left:10%;
+    z-index:2
+}
+
+.position-left {
+    position: absolute;
+    top:20%;
+    left: 52%;
+   
+}
+
+.position-right {
+    position: absolute;
+    top: 49%;
+    left: 52%;
+}
+
+.treeBox1{
+    position:absolute;
+    top:37%;
+    left:18.3%;
+    z-index:1
+}
+
+.treeBox2{
+    position:absolute;
+    top:23%;
+    left:40%;
+}

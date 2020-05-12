@@ -1,0 +1,103 @@
+﻿
+
+/*
+ * 版    本：Ver1.0.0.
+ * 
+ * 类    名：
+ * 
+ * 文 件 名：User Login-box.css
+ * 
+ * 作    者：宋宪鹏.
+ * 
+ * 日    期：2012.4.4
+ * 
+ * 描    述：用户登录页面css
+ * 
+ */
+
+html {
+    font-size: 13px;
+    font-family: Sans-Serif;
+}
+
+#login-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 500px;
+    color: #333333;
+    font: 12px;
+    /*background: url(../images/Login-topbottom.gif) no-repeat left top;*/
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.login-title-div {
+    width: 100px;
+    text-align: right;
+    float: left;
+    color: #666666;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.login-input-div {
+    width: 160px;
+    text-align: left;
+    float: right;
+    display: inline;
+    color: #666666;
+}
+
+    .login-input-div input {
+        width: 150px;
+        height:25px;
+        text-align: left; /*padding-right:60px;*/
+    }
+
+.login-div-display {
+    height: 25px;
+    line-height: 25px;
+    width: 270px;
+    margin-top: 8px;
+}
+
+.login-div-footer {
+    color: #666666;
+    margin-bottom: 0px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: bottom;
+}
+
+    .login-div-footer a {
+        color: #208484;
+        text-decoration: none;
+    }
+
+.login-input-div a {
+    color: #208484;
+    text-decoration: none;
+}
+
+
+#login-footer {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    color:#000000;
+    line-height: 25px;
+      font-size: 15px;
+    font-weight: 700;
+}
+
+.title{
+     position: relative;
+            left: 10px;
+            top: 1px;
+            width: 635px;
+}

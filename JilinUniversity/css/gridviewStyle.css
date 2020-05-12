@@ -1,0 +1,92 @@
+﻿body {
+    font-family:Courier;
+    font-size:10px;
+
+}
+
+.mGrid {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    border :none;
+    border-collapse:collapse;
+}
+.mGrid td {
+    padding: 2px;
+    border: solid 1px #c1c1c1;
+    color:black;
+  
+}
+.mGrid th {
+    text-align:center;
+    padding: 4px 2px;
+    background:#eff1f0;
+    /*background: #171c22 url(grd_head.png) repeat-x top;*/
+    border-top: solid 3px #27a9e3;
+    border-left: solid 1px #c1c1c1;
+     border-right: solid 1px #c1c1c1;
+      border-bottom: solid 1px #c1c1c1;
+
+}
+.mGrid .alt { background: red; }
+.mGrid .pgr { background: #171c22; }
+.mGrid .pgr table { margin: 5px 0; }
+.mGrid .pgr td {
+    border-width: 0;
+    padding: 0 6px;
+    border-left: solid 1px #666;
+    font-weight: bold;
+   
+    line-height: 12px;
+}
+.mGrid .pgr a {  text-decoration: none; }
+.mGrid .pgr a:hover {  color:red; }
+
+
+
+
+ /*显示省略号功能*/
+.mlength {
+    display: block;
+    /*width: 90px;*/
+    overflow: hidden; /*超出不显示*/
+    white-space: nowrap; /*不换行*/
+    -o-text-overflow: ellipsis; /*显示省略号*/
+    text-overflow: ellipsis; /*显示省略号*/
+} 
+
+   .mlength1                
+    {  
+        display: block; 
+        width: 400px;      
+        overflow: hidden;                   /*超出不显示*/
+        white-space: nowrap;                /*不换行*/
+        -o-text-overflow: ellipsis;         /*显示省略号*/
+        text-overflow: ellipsis;            /*显示省略号*/
+   }  
+
+   .mlength2  
+    {  
+        display: block;  
+        width: 120px;   
+        overflow: hidden;                   /*超出不显示*/
+        white-space: nowrap;                /*不换行*/
+        -o-text-overflow: ellipsis;         /*显示省略号*/
+        text-overflow: ellipsis;            /*显示省略号*/
+   }
+   .mlength3 
+    {  
+        display: block;  
+        width: 200px;   
+        overflow: hidden;                   /*超出不显示*/
+        white-space: nowrap;                /*不换行*/
+        -o-text-overflow: ellipsis;         /*显示省略号*/
+        text-overflow: ellipsis;            /*显示省略号*/
+   }
+
+   
+.mlength4 {
+    display: block;
+    width: auto;
+    white-space: nowrap; /*不换行*/
+}
