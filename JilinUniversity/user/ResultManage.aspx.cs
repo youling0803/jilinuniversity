@@ -8,38 +8,27 @@ using System.Web.UI.WebControls;
 
 namespace JilinUniversity.user
 {
-    public partial class TopicManage : System.Web.UI.Page
+    public partial class ResultManage : System.Web.UI.Page
     {
-        //页面加载
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID", typeof(System.Int32));
-            dt.Columns.Add("TopicCode", typeof(System.String));
-            dt.Columns.Add("PDFFile", typeof(System.String));
-            dt.Columns.Add("TopicName", typeof(System.String));
+            dt.Columns.Add("ResultName", typeof(System.String));
             dt.Columns.Add("FacilityName", typeof(System.String));
-            dt.Columns.Add("Equipment", typeof(System.String));
-            dt.Columns.Add("UserRole", typeof(System.String));
-            dt.Columns.Add("AuditStatus", typeof(System.String));
-            dt.Columns.Add("ApprovedTime", typeof(System.String));
-            dt.Columns.Add("LeftTime", typeof(System.String));
-            dt.Columns.Add("EndDate", typeof(System.DateTime));
+            dt.Columns.Add("PaperName", typeof(System.String));
+            dt.Columns.Add("Writer", typeof(System.String));
+            dt.Columns.Add("Publication", typeof(System.String));
+            dt.Columns.Add("PublishDate", typeof(System.DateTime));
 
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
 
             GridViewDetection.DataSource = dt;
             GridViewDetection.DataBind();
-            //int ColumnCount = this.GridViewDetection.Rows[0].Cells.Count;
-            //this.GridViewDetection.Rows[0].Cells.Clear();
-            //this.GridViewDetection.Rows[0].Cells.Add(new TableCell());
-            //this.GridViewDetection.Rows[0].Cells[0].ColumnSpan = ColumnCount;
-            //this.GridViewDetection.Rows[0].Cells[0].Text = "<center>No Records Found.</center>";
         }
 
-        //新增点击事件
-        protected void NewAddTopic(object sender, EventArgs e)
+        protected void NewAddResult(object sender, EventArgs e)
         {
 
         }
@@ -53,7 +42,7 @@ namespace JilinUniversity.user
         //GirdView操作点击事件
         protected void LBdownload_Command(object sender, CommandEventArgs e)
         {
-            
+
         }
 
         //GridView数据绑定事件

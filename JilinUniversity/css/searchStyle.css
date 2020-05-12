@@ -1,0 +1,12 @@
+﻿body {
+}
+.person-list-title{height: 50px;padding: 0 15px;background-color: #1772b4;box-shadow: 0 -10px 10px rgba(0,0,0,0.3) inset;}
+.person-list-title>select{padding:4px;margin-top: 10px;}
+.person-list-title>span{color: #fff;float: left;margin-right: 10px;line-height: 50px;}
+ul.title-select>li{display: inline-block;float: left;margin: 0 10px;position: relative;}
+ul.title-select>li>a{padding: 6px 10px;background-color: #fff;border:1px solid #ddd;border-radius: 4px;line-height: 50px;cursor: pointer;}
+ul.title-select>li:hover>a{background-color: #3383b4;color: #fff;border-color: #3383b4;}
+ul.title-select>li>ul.title-option{background-color: #3383b4;padding: 10px;color: #fff;border-radius: 0 0 4px 4px;margin-top: -10px;position: absolute;left: 0;}
+ul.title-select>li>ul.title-option>li{display:inline-block;padding: 5px 8px;}
+ul.title-select>li>ul.title-option>li>a,ul.title-select>li>ul.title-option>li>a:focus{color: #fff;text-decoration: none;cursor: pointer;white-space: nowrap;}
+ul.title-select>li>ul.title-option>li>a:hover{color: #e5a377;text-decoration: none;}

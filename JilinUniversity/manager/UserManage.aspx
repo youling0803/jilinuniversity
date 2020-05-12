@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TopicManage.aspx.cs" Inherits="JilinUniversity.user.TopicManage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserManage.aspx.cs" Inherits="JilinUniversity.manager.UserManage" %>
 
 <!DOCTYPE html>
 
@@ -11,14 +11,12 @@
     <link href="../css/tableBase.css" rel="stylesheet" />
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/xcConfirm.css" rel="stylesheet" />
-    <link href="../css/searchStyle.css" rel="stylesheet" />
     <%--<link type="text/css" href="../css/login/password.css" rel="stylesheet" />--%>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/tablebase.js"></script>
     <script src="../js/xcConfirm.js"></script>
     <script src="../js/alert.js"></script>
     <script src="../js/cookie.js"></script>
-    <script src="../js/showHide.js"></script>
 
     <%-- 中英文切换--%>
     <script src="../js/jquery.min.js"></script>
@@ -42,20 +40,6 @@
         //}
 
     </script>
-    <script type="text/javascript">
-		var btns = document.getElementsByClassName("top-navs");
-		var subnavs = document.getElementsByClassName("top-navlist");
-		var titleNavs = document.getElementsByClassName("title-navs");
-		var titleOptions = document.getElementsByClassName("title-option");
-		var tableSort = document.getElementsByClassName("table-sort");
-		//var imgs = document.getElementById('imgs').src;
-		window.onload = function() {
-			showHide(btns, subnavs);
-			showHide(titleNavs, titleOptions);
-			Onclick(tableSort);
-			
-		}
-	</script>
 </head>
 <body>
     <div class="content_top">
@@ -63,7 +47,7 @@
             <div class="position_content">
                 <i class="glyphicon glyphicon-home" style="cursor: pointer;"></i>
                 <span>></span>
-                <span>课题管理</span>
+                <span>用户管理</span>
             </div>
             <div class="position_bottom">
                 <a onclick="renovates()" data-i18n="General.refresh">刷新</a>
@@ -80,48 +64,21 @@
             <%--<input type="button" id="hiddenbuttonOffdata" runat="server" onserverclick="hiddenbuttonOffdata_Click" style="display: none" />--%>
             <div class="functionbtn">
                 <span>
-                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddTopic">
-                        新增课题申请
+                    <button type="button" class="btn btn-primary btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddUser">
+                        新增用户
                     <span class="glyphicon glyphicon-plus"></span>
                     </button>
                 </span>
             </div>
             <div>
-                <%--可能会修改，实现难度较大--%>
-                <div class="person-list-title">
-                    <span>查询条件</span>
-                    <ul class="title-select">
-                        <li class="title-navs">
-                            <input type="text" id="ktStateSort" name="ktStateSort" style="visibility: hidden; display: none" value="0">
-                            <a class="title-link">状态 : 全部</a>
-                            <ul class="title-option" style="display: none;">
-                                <li><a href="#" onclick="javascript:queryState('1');">编辑中</a></li>
-                                <li><a href="#" onclick="javascript:queryState('2');">审核中</a></li>
-                                <li><a href="#" onclick="javascript:queryState('3');">已结题</a></li>
-                                <li><a href="#" onclick="javascript:queryState('4');">审核通过</a></li>
-                                <li><a href="#" onclick="javascript:queryState('5');">审核不通过</a></li>
-                                <li><a href="#" onclick="javascript:queryState('0');">全部</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="title-select">
-                        <li class="title-navs">
-                            <input type="text" id="ktRoleSort" name="ktRoleSort" style="visibility: hidden; display: none" value="0">
-                            <a class="title-link">角色 : 全部</a>
-                            <ul class="title-option" style="display: none;">
-                                <li><a href="#" onclick="javascript:queryRole(1);">课题负责人</a></li>
-                                <li><a href="#" onclick="javascript:queryRole(2);">课题参与人</a></li>
-                                <li><a href="#" onclick="javascript:queryRole(0);">全部</a></li>
-                            </ul>
-
-                        </li>
-                    </ul>
+                <div>
+                    <%--搜索框--%>
                 </div>
                 <asp:GridView ID="GridViewDetection" runat="server" AllowPaging="True" AutoGenerateColumns="False" Width="100%" PageSize="5" Font-Size="10pt" CssClass="mGrid"
                     DataKeyNames="ID"
                     OnDataBound="GridViewDetection_DataBound"
                     OnRowDataBound="GridViewDetection_RowDataBound"
-                    OnPageIndexChanging="GridViewDetection_PageIndexChanging">
+                    OnPageIndexChanging="GridViewDetection_PageIndexChanging" OnRowEditing="GridViewDetection_RowEditing">
                     <%-- 样式设定 --%>
                     <AlternatingRowStyle BackColor="#F9F9F9" HorizontalAlign="Left" VerticalAlign="Middle" />
                     <Columns>
@@ -145,82 +102,33 @@
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>--%>
 
-                        <asp:TemplateField HeaderText="课题编码">
+                        <asp:TemplateField HeaderText="用户名">
                             <ItemTemplate>
-                                <asp:Label ID="LabelTopicCode" Text='<%# Eval("TopicCode") %>' runat="server" CssClass="mlength4"></asp:Label>
+                                <asp:Label ID="LabelUserName" Text='<%# Eval("UserName") %>' runat="server" CssClass="mlength4"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
 
-                        <asp:TemplateField HeaderText="课题PDF文件">
+                        <asp:TemplateField HeaderText="密码">
                             <ItemTemplate>
-                                <asp:Label ID="LabelPDFFile" Text='<%# Eval("PDFFile") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="课题名">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelTopicName" Text='<%# Eval("TopicName") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="申请设施">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelFacilityName" Text='<%# Eval("FacilityName") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="线站/设备/终端">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelEquipment" Text='<%# Eval("Equipment")%>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelPassword" Text='<%# Eval("Password") %>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="角色">
                             <ItemTemplate>
-                                <asp:Label ID="LabelUserRole" Text='<%# Eval("UserRole")%>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="审核状态">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelAuditStatus" Text='<%# Eval("AuditStatus")%>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelRole" Text='<%# Eval("Role") %>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-
-                        <asp:TemplateField HeaderText="批复机时">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelApprovedTime" Text='<%# Eval("ApprovedTime")%>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="剩余机时">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelLeftTime" Text='<%# Eval("LeftTime") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="到期日">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelEndDate" Text='<%# Bind("EndDate","{0:yyyy/MM/dd}")%>' runat="server" CssClass="mlength2"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
                                 <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>
-                                <asp:LinkButton ID="LBcheck" runat="server" CausesValidation="False" CommandName="Select" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="提交"></asp:LinkButton>
                                 <asp:LinkButton ID="LBdelete" runat="server" CausesValidation="False" CommandName="Offdata" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="删除"></asp:LinkButton>
-                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="复制课题"></asp:LinkButton>
+                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="修改权限"></asp:LinkButton>
                             </ItemTemplate>
                             <ControlStyle Width="56px" />
                             <ItemStyle ForeColor="#0066CD" HorizontalAlign="Center" Width="250px" />
@@ -263,15 +171,30 @@
                             <!-- 右侧 退出 按钮-->
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                 &times;</button>
-                            <h4 class="modal-title" id="myModalLabel">填写申请作废的原因
+                            <h4 class="modal-title" id="myModalLabel">用户管理
                             </h4>
                         </div>
                         <div id="divDepart" class="modal-body" runat="server">
                             <table class="table table-bordered">
                                 <tr>
-                                    <td class="tit" style="height: 50px;">作废原因<span class="star">*</span></td>
+                                    <td class="tit" style="height: 50px;">账号<span class="star"></span></td>
                                     <td>
-                                        <input type="text" class="reg_sign" runat="server" style="height: 100px;" id="InvalidReason" name="backReason" />
+                                        <input type="text" class="reg_sign" runat="server" maxlength="20" id="UsrName" name="backReason" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit" style="height: 50px;">密码<span class="star"></span></td>
+                                    <td>
+                                        <input type="text" class="reg_sign" runat="server" maxlength="20" id="Pwd" name="backReason" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tit" style="height: 50px;">用户权限<span class="star"></span></td>
+                                    <td>
+                                        <select runat="server" id="UserRole" name="UserRole" class="inputstyle">
+                                            <option>研究员</option>
+                                            <option>专家</option>
+                                        </select>
                                     </td>
                                 </tr>
                             </table>

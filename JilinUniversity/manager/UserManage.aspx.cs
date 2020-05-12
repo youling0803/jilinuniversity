@@ -6,54 +6,44 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace JilinUniversity.user
+namespace JilinUniversity.manager
 {
-    public partial class TopicManage : System.Web.UI.Page
+    public partial class UserManage : BasePage
     {
-        //页面加载
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ID", typeof(System.Int32));
-            dt.Columns.Add("TopicCode", typeof(System.String));
-            dt.Columns.Add("PDFFile", typeof(System.String));
-            dt.Columns.Add("TopicName", typeof(System.String));
-            dt.Columns.Add("FacilityName", typeof(System.String));
-            dt.Columns.Add("Equipment", typeof(System.String));
-            dt.Columns.Add("UserRole", typeof(System.String));
-            dt.Columns.Add("AuditStatus", typeof(System.String));
-            dt.Columns.Add("ApprovedTime", typeof(System.String));
-            dt.Columns.Add("LeftTime", typeof(System.String));
-            dt.Columns.Add("EndDate", typeof(System.DateTime));
+            dt.Columns.Add("UserName", typeof(System.String));
+            dt.Columns.Add("Password", typeof(System.String));
+            dt.Columns.Add("Role", typeof(System.String));
 
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
 
             GridViewDetection.DataSource = dt;
             GridViewDetection.DataBind();
-            //int ColumnCount = this.GridViewDetection.Rows[0].Cells.Count;
-            //this.GridViewDetection.Rows[0].Cells.Clear();
-            //this.GridViewDetection.Rows[0].Cells.Add(new TableCell());
-            //this.GridViewDetection.Rows[0].Cells[0].ColumnSpan = ColumnCount;
-            //this.GridViewDetection.Rows[0].Cells[0].Text = "<center>No Records Found.</center>";
         }
 
-        //新增点击事件
-        protected void NewAddTopic(object sender, EventArgs e)
+        protected void NewAddUser(object sender, EventArgs e)
         {
-
+            HiddenFieldDetail.Value = (-1).ToString();
+            ShowModal();
         }
 
-        //模态框中确定按钮事件
         protected void GetReason_Invalid(object sender, EventArgs e)
         {
 
         }
 
-        //GirdView操作点击事件
         protected void LBdownload_Command(object sender, CommandEventArgs e)
         {
-            
+            string cmdName = e.CommandName;
+
+            if(cmdName == "Edit")
+            {
+                ShowModal();
+            }
         }
 
         //GridView数据绑定事件
@@ -88,6 +78,11 @@ namespace JilinUniversity.user
                 GridViewDetection.PageIndex = e.NewPageIndex;
             }
             //GridViewBind();
+        }
+
+        protected void GridViewDetection_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
         }
     }
 }

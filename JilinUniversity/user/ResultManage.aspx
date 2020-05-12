@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TopicManage.aspx.cs" Inherits="JilinUniversity.user.TopicManage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResultManage.aspx.cs" Inherits="JilinUniversity.user.ResultManage" %>
 
 <!DOCTYPE html>
 
@@ -63,7 +63,7 @@
             <div class="position_content">
                 <i class="glyphicon glyphicon-home" style="cursor: pointer;"></i>
                 <span>></span>
-                <span>课题管理</span>
+                <span>成果管理</span>
             </div>
             <div class="position_bottom">
                 <a onclick="renovates()" data-i18n="General.refresh">刷新</a>
@@ -80,8 +80,8 @@
             <%--<input type="button" id="hiddenbuttonOffdata" runat="server" onserverclick="hiddenbuttonOffdata_Click" style="display: none" />--%>
             <div class="functionbtn">
                 <span>
-                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddTopic">
-                        新增课题申请
+                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddResult">
+                        新增成果
                     <span class="glyphicon glyphicon-plus"></span>
                     </button>
                 </span>
@@ -89,33 +89,6 @@
             <div>
                 <%--可能会修改，实现难度较大--%>
                 <div class="person-list-title">
-                    <span>查询条件</span>
-                    <ul class="title-select">
-                        <li class="title-navs">
-                            <input type="text" id="ktStateSort" name="ktStateSort" style="visibility: hidden; display: none" value="0">
-                            <a class="title-link">状态 : 全部</a>
-                            <ul class="title-option" style="display: none;">
-                                <li><a href="#" onclick="javascript:queryState('1');">编辑中</a></li>
-                                <li><a href="#" onclick="javascript:queryState('2');">审核中</a></li>
-                                <li><a href="#" onclick="javascript:queryState('3');">已结题</a></li>
-                                <li><a href="#" onclick="javascript:queryState('4');">审核通过</a></li>
-                                <li><a href="#" onclick="javascript:queryState('5');">审核不通过</a></li>
-                                <li><a href="#" onclick="javascript:queryState('0');">全部</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="title-select">
-                        <li class="title-navs">
-                            <input type="text" id="ktRoleSort" name="ktRoleSort" style="visibility: hidden; display: none" value="0">
-                            <a class="title-link">角色 : 全部</a>
-                            <ul class="title-option" style="display: none;">
-                                <li><a href="#" onclick="javascript:queryRole(1);">课题负责人</a></li>
-                                <li><a href="#" onclick="javascript:queryRole(2);">课题参与人</a></li>
-                                <li><a href="#" onclick="javascript:queryRole(0);">全部</a></li>
-                            </ul>
-
-                        </li>
-                    </ul>
                 </div>
                 <asp:GridView ID="GridViewDetection" runat="server" AllowPaging="True" AutoGenerateColumns="False" Width="100%" PageSize="5" Font-Size="10pt" CssClass="mGrid"
                     DataKeyNames="ID"
@@ -145,76 +118,49 @@
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>--%>
 
-                        <asp:TemplateField HeaderText="课题编码">
+                        <asp:TemplateField HeaderText="成果名称">
                             <ItemTemplate>
-                                <asp:Label ID="LabelTopicCode" Text='<%# Eval("TopicCode") %>' runat="server" CssClass="mlength4"></asp:Label>
+                                <asp:Label ID="LabelResultName" Text='<%# Eval("ResultName") %>' runat="server" CssClass="mlength4"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-
-                        <asp:TemplateField HeaderText="课题PDF文件">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelPDFFile" Text='<%# Eval("PDFFile") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="课题名">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelTopicName" Text='<%# Eval("TopicName") %>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="申请设施">
+                        <asp:TemplateField HeaderText="设施名称">
                             <ItemTemplate>
                                 <asp:Label ID="LabelFacilityName" Text='<%# Eval("FacilityName") %>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="线站/设备/终端">
+                        <asp:TemplateField HeaderText="论文名">
                             <ItemTemplate>
-                                <asp:Label ID="LabelEquipment" Text='<%# Eval("Equipment")%>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelPaperName" Text='<%# Eval("PaperName")%>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="角色">
+                        <asp:TemplateField HeaderText="作者">
                             <ItemTemplate>
-                                <asp:Label ID="LabelUserRole" Text='<%# Eval("UserRole")%>' runat="server" CssClass="mlength"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="审核状态">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelAuditStatus" Text='<%# Eval("AuditStatus")%>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelWriter" Text='<%# Eval("Writer") %>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-
-                        <asp:TemplateField HeaderText="批复机时">
+                        <asp:TemplateField HeaderText="期刊">
                             <ItemTemplate>
-                                <asp:Label ID="LabelApprovedTime" Text='<%# Eval("ApprovedTime")%>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelPublication" Text='<%# Eval("Publication")%>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="剩余机时">
+                        
+                        <asp:TemplateField HeaderText="发表年份">
                             <ItemTemplate>
-                                <asp:Label ID="LabelLeftTime" Text='<%# Eval("LeftTime") %>' runat="server" CssClass="mlength"></asp:Label>
+                                <asp:Label ID="LabelPublishDate" Text='<%# Bind("PublishDate","{0:yyyy/MM/dd}")%>' runat="server" CssClass="mlength"></asp:Label>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="到期日">
-                            <ItemTemplate>
-                                <asp:Label ID="LabelEndDate" Text='<%# Bind("EndDate","{0:yyyy/MM/dd}")%>' runat="server" CssClass="mlength2"></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
                                 <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>

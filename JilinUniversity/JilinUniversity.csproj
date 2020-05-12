@@ -103,6 +103,7 @@
     <Content Include="css\homeButton.css" />
     <Content Include="css\jquery-accordion-menu.css" />
     <Content Include="css\Page.css" />
+    <Content Include="css\searchStyle.css" />
     <Content Include="css\tableBase.css" />
     <Content Include="css\UserLogin.css" />
     <Content Include="css\xcConfirm.css" />
@@ -123,9 +124,12 @@
     <Content Include="js\jquery-accordion-menu.js" />
     <Content Include="js\jquery.easyui.min.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\showHide.js" />
     <Content Include="js\xcConfirm.js" />
     <Content Include="js\樱花.js" />
     <Content Include="Login.aspx" />
+    <Content Include="manager\NoticeManage.aspx" />
+    <Content Include="manager\UserManage.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -140,6 +144,8 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="user\ExperimentManage.aspx" />
+    <Content Include="user\ResultManage.aspx" />
     <Content Include="user\TopicManage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -160,7 +166,34 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="manager\NoticeManage.aspx.cs">
+      <DependentUpon>NoticeManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\NoticeManage.aspx.designer.cs">
+      <DependentUpon>NoticeManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user\ExperimentManage.aspx.cs">
+      <DependentUpon>ExperimentManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\ExperimentManage.aspx.designer.cs">
+      <DependentUpon>ExperimentManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\ResultManage.aspx.cs">
+      <DependentUpon>ResultManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\ResultManage.aspx.designer.cs">
+      <DependentUpon>ResultManage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\TopicManage.aspx.cs">
       <DependentUpon>TopicManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,9 +202,7 @@
       <DependentUpon>TopicManage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="manager\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
