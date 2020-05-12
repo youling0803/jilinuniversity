@@ -34,17 +34,17 @@
         obj.src = obj.src + '?';
     }
 </script>
-<body id="all" style="background: url('image/background.jpg') no-repeat; background-size: cover;">
+<body id="all" style="background: url('image/login.jpg') no-repeat; background-size: cover;">
     <form runat="Server" defaultbutton="LoginBtn">
         <div>
             <div id="login-box">
                 <center>
-            <div >
+            <!--<div >
                 <img src="image/title.png" class="title" style="position:center"/>
-             </div>
+             </div>-->
                 </center>
-                <div style="background: url(image/Login-topbottom.gif) no-repeat left top; padding-top: -5px; height: 380px;" id="LoginBox">
-                    <div style="float: right; width: 360px; height: 280px; padding-right: 80px; padding-top: 80px;">
+                <div style="background-color:#FFFFFF; padding-top: -5px; height:300px;width:350px; margin-top:50px;position:absolute;top:20%;left:0;right:0;margin:0 auto;" id="LoginBox" ; >
+                    <!--<div style="float: right; width: 360px; padding-right: 80px; padding-top: 80px;">-->
                         <div class="login-div-display">
                         </div>
                         <div class="login-div-display">
@@ -66,11 +66,16 @@
                         </div>
                         <br />
                         <br />
+                       <br />
+                       <br />
+                    <br />
+                       <br />
                         <div class="login-div-display" style="vertical-align: middle;">
-                            <div style="float: left; text-align: right; width: 100%" class="login-div-footer">
-                                <asp:Button ID="LoginBtn" runat="server" Text="登录" OnClick="LoginBtn_Click" Width="100px"
+                            <div style=" text-align: right; width: 100%" padding-left:"120px" class="login-div-footer">
+                              <!-- <input type="button" value="登录" runat="server" onclick="window.location.href('Home.aspx')"/>-->
+                                <asp:Button ID="LoginBtn" runat="server" Text="登录" OnClick="LoginBtn_Click" Width="300px" BackColor="#1C94D1" ForeColor="white"
                                     Font-Size="Large"
-                                    font-weight="500" />
+                                    font-weight="400" boder-radius="50px" BorderWidth="0px" Height="35px"  />
                             </div>
                             <%-- <div style="float: right; text-align: center; vertical-align: middle; width: 50%"
                             class="login-div-footer">
@@ -82,9 +87,9 @@
                 </div>
             </div>
             <%--版权提示--%>
-            <div id="login-footer">
+           <!-- <div id="login-footer">
                 不建议使用360安全浏览器及谷歌浏览器
-            </div>
+            </div>-->
         </div>
     </form>
 </body>
