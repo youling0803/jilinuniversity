@@ -29,11 +29,11 @@ html {
     color: #333333;
     font: 12px;
     /*background: url(../images/Login-topbottom.gif) no-repeat left top;*/
-    margin-left: -400px;
+    margin-left: -300px;
     margin-top: -300px;
 }
 
-.login-title-div {
+/*.login-title-div {
     width: 100px;
     text-align: right;
     float: left;
@@ -41,12 +41,13 @@ html {
     height: 25px;
     line-height: 25px;
     vertical-align: middle;
-}
+}*/
 
 .login-input-div {
     width: 320px;
     text-align: left;
-    float: right;
+    float:left;
+    margin-left:30px;
     display: inline;
     color: #666666;
 }
