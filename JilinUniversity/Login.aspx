@@ -55,7 +55,7 @@
                         <div class="login-div-display">
                            <!--<div id="div4" class="login-title-div"style="padding-top:12%;color:#fff;font-size:16px;">
                                <p> 用户密码:</p>
-                            </div>-->
+                            </div>-->  
                             <div id="div5" class="login-input-div" style="padding-top:8%;">
                                 <asp:TextBox ID="mPassWordTbx" runat="server" TextMode="Password" Style="width: 360px; border-radius: 3px; height: 40px; background-color:white;border:1px solid #0AADE9; font-size: 16px; font-size: 16px; text-align:center"  BorderStyle="None" text="Username" placeholder="Password"></asp:TextBox>
                                 </div>
