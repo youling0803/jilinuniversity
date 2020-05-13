@@ -146,6 +146,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="user\ExperimentManage.aspx" />
     <Content Include="user\ResultManage.aspx" />
+    <Content Include="user\SelfMessage.aspx" />
     <Content Include="user\TopicManage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -193,6 +194,13 @@
     </Compile>
     <Compile Include="user\ResultManage.aspx.designer.cs">
       <DependentUpon>ResultManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\SelfMessage.aspx.cs">
+      <DependentUpon>SelfMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\SelfMessage.aspx.designer.cs">
+      <DependentUpon>SelfMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\TopicManage.aspx.cs">
       <DependentUpon>TopicManage.aspx</DependentUpon>
