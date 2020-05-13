@@ -79,6 +79,7 @@
             <asp:HiddenField ID="HiddenFieldDetail" runat="server" />
             <%--<input type="button" id="hiddenbuttonOffdata" runat="server" onserverclick="hiddenbuttonOffdata_Click" style="display: none" />--%>
             <div class="functionbtn">
+                <div>
                 <span>
                     <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddResult">
                         新增成果

@@ -44,6 +44,10 @@ namespace JilinUniversity
             UserThree.menuName = "成果管理";
             UserThree.url = @"user/ResultManage.aspx";
             User.Add(UserThree);
+            menu UserFour = new menu();
+            UserFour.menuName = "个人信息";
+            UserFour.url = @"user/SelfMessage.aspx";
+            User.Add(UserFour);
 
             menu MagOne = new menu();
             MagOne.menuName = "用户管理";
