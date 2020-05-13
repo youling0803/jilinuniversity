@@ -14,7 +14,7 @@ namespace JilinUniversity
             
         }
 
-        protected void LoginBtn_Click(object sender, EventArgs e)
+       protected void LoginBtn_Click(object sender, EventArgs e)
         {
             Session["UserType"] = 1;
             Session["UserName"] = "JiLinUniversity";
