@@ -39,50 +39,37 @@
     <form runat="Server" defaultbutton="LoginBtn">
         <div>
             <div id="login-box">
-            <!--<div >
-                <img src="image/title.png" class="title" style="position:center"/>
-             </div>-->
-                 <div style=" padding-top: -5px; height:370px;width:430px;border:1px solid rgba(255,255,255,1);  
-    background-color: rgba(255, 255, 255, 0.3); margin-top:50px;position:absolute;top:20%;left:0;right:0;margin:0 auto;" id="LoginBox" ; > <!--整个的登录框-->
+                 <div style=" padding-top: -5px; height:370px;width:430px;border:1px solid rgba(255,255,255,1); background-color: rgba(255, 255, 255, 0.3); margin-top:50px;position:absolute;top:20%;left:0;right:0;margin:0 auto;" id="LoginBox" ; > 
                         <div class="login-div-display" >
-                           <div id="div2" class="login-title-div" style="padding-top:10%;color:#fff;font-size:16px;">
+                           <div id="div2" class="login-title-div" style="padding-top:12%;color:#fff;font-size:16px;">
                                 <p>用户帐号:</p>
                             </div>
-                            <div id="div3" class="login-input-div" style="padding-top:22%;">
-                                <asp:TextBox ID="mUserNameTbx" runat="server" Style="width: 350px; height: 40px; border-radius: 3px; background-color: #E8F0FE; font-size: 12px;" BorderStyle="None"></asp:TextBox>
-                                <%--<input name="q" title="Username" value="" />--%>
+                            <div id="div3" class="login-input-div" style="padding-top:10%;">
+                                <asp:TextBox ID="mUserNameTbx" runat="server" Style="width: 280px; height: 40px; border-radius: 3px; background-color: #E8F0FE; font-size: 16px; text-align:center" BorderStyle="None"></asp:TextBox>
                             </div>
                         </div>
                         <div class="login-div-display">
-                           <div id="div4" class="login-title-div"style="padding-top:28%;color:#fff;font-size:16px;">
+                           <div id="div4" class="login-title-div"style="padding-top:12%;color:#fff;font-size:16px;">
                                <p> 用户密码:</p>
                             </div>
-                            <div id="div5" class="login-input-div" style="padding-top:23%;">
-                                <asp:TextBox ID="mPassWordTbx" runat="server" TextMode="Password" Style="width: 350px; border-radius: 3px; height: 40px; background-color: #E8F0FE; font-size: 12px;" BorderStyle="None"></asp:TextBox>
+                            <div id="div5" class="login-input-div" style="padding-top:10%;">
+                                <asp:TextBox ID="mPassWordTbx" runat="server" TextMode="Password" Style="width: 280px; border-radius: 3px; height: 40px; background-color: #E8F0FE; font-size: 16px; font-size: 16px; text-align:center"  BorderStyle="None"></asp:TextBox>
                                 </div>
                             </div>
-                        <!--<div class="login-div-display" style="vertical-align: middle;">-->
-                            <div style=" text-align: right; width: 100%" padding-left:"120px" class="login-div-footer">
+                        <div class="login-div-display" style="vertical-align: middle;">
+                            <div style="text-align: right; width: 100%" padding-left:"120px" class="login-div-footer">
                               <!-- <input type="button" value="登录" runat="server" onclick="window.location.href('Home.aspx')"/>-->
-                                <asp:Button ID="LoginBtn" runat="server" Text="登录" OnClick="LoginBtn_Click" 
- BorderStyle="None" style="border-radius:3px;color:#FFFFFF;background-color:#0AADE9;width:150px;height:40px;" />
-                                <asp:Button ID="LoginBtn2" runat="server" Text="管理员" OnClick="LoginBtn2_Click" Width="100px"
-                                    Font-Size="Large"
-                                    font-weight="500" />
+                                <div style="float:right;padding-top:10%;padding-right:40px">
+                                    <asp:Button ID="LoginBtn" runat="server" Text="登  录" OnClick="LoginBtn_Click"  BorderStyle="None" style="border-radius:3px;color:#FFFFFF;background-color:#0AADE9;width:135px;height:40px;" />
+                                </div>
+                                <div  style="float:right;padding-top:10%;padding-right:10px">
+                                <asp:Button ID="LoginBtn2" runat="server" Text="管理员" OnClick="LoginBtn2_Click" BorderStyle="None" style="border-radius:3px;color:#FFFFFF;background-color:#0AADE9;width:135px;height:40px;" />
+                                </div>
                             </div>
-                            <%-- <div style="float: right; text-align: center; vertical-align: middle; width: 50%"
-                            class="login-div-footer">
-                            <asp:Button ID="mCancleBtn" runat="server" Text="重置" OnClick="mCancleBtn_Click" />
-                            <%--<input type="button" value="重置" />
-                        </div>
-                        </div>--%>
-                                    </div>
-                             </div>
                     </div>
-            <%--版权提示--%>
-           <!-- <div id="login-footer">
-                不建议使用360安全浏览器及谷歌浏览器
-            </div>-->
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>
