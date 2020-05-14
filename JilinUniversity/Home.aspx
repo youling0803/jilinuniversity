@@ -66,7 +66,7 @@
         .auto-style2 {
             position: absolute;
             left: 202px; /*top: 35px;*/
-            top: 40px;
+            top: 80px;
             right: 0;
             bottom: 0;
             overflow: hidden;
@@ -78,10 +78,11 @@
 <body>
     <form id="form1" runat="server">
         <div class="logo3" style="background-color: #3383b4;">
-          <div style="margin: 1px auto; width: 300px; color: aqua">
-                <%--<img src="image/background" style="width: 400px;position:center" />--%>
-            </div>
-            <ul class="title-select" style="margin-left:88%;margin-top:-0.4%;" >
+                    <img src="image/topic.png" style="width: 70px; height:70px; margin-left:2%;margin-top:0.5%; float:left; " />
+            <div style="float:left;width:300px;margin-top:3%;margin-left:1%;">
+            <b style="color:#FFFFFF;font-size:18px;font-weight:400;" >科研课题管理平台</b>
+                </div>
+            <ul class="title-select" style="margin-left:87%;margin-top:2%; font-size:16px;" >
                         <li class="title-navs">
                             <input type="text" id="ktStateSort" name="ktStateSort" style="visibility: hidden; display: none" value="0">
                             <a class="title-link" style="color:white;border:0px;background-color:#3383b4;">mengtong
@@ -93,18 +94,18 @@
                             </ul>
                         </li>
                     </ul>
-            <a href="Login.aspx" class="rightup" style="color:#FFFFFF;">注销</a>
+            <a href="Login.aspx" class="rightup" style="color:#FFFFFF; margin-top:2.3%;font-size:16px;=left:88%;">注销</a>
         </div>
         <div>
-            <aside id="box_left">
+            <aside id="box_left" style="top:80px;">
                <!-- <div class="picture">
                     <img src="image/background.jpg" style="width: 80%; height: 80%; margin-left: 10%;" />
                     <div class="username" style="text-align: center">
                         <h5>用户名：<b><asp:Label runat="server" ID="Label_userName" Text=""></asp:Label></b></h5>
                     </div>
                 </div>-->
-                <div>
-                    <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+                <div >
+                    <div id="jquery-accordion-menu" class="jquery-accordion-menu red" >
                         <ul id="demo_list" runat="server">
                         </ul>
                     </div>
