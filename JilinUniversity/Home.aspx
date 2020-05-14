@@ -117,6 +117,160 @@
                         <div title="主页">
                         </div>
                     </div>
+                    <div style="display: inline-block; float: left; width: 50%; height: inherit">
+                        <div style="padding-top: 10px; padding-left: 30px; background-color: #f3f7f9; padding-right: 10px; padding-bottom: 10px; height: 50%;">
+                            <div class="layout">
+                                <div class="layout-title">
+                                    <span>
+                                        <img src="en/images/icon-todolist.png" height="30" width="30" alt=""></span>
+                                    <h3>待办事宜</h3>
+                                </div>
+                                <div class="layout-con todo-list">
+                                    <p class="text text-link">
+                                        <a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goAddProjectFourPage&amp;id=89fa13d1e6994ba69798811bfad78174">提交课题 2020-RSA-PT-00032</a>
+                                    </p>
+                                    <p class="text text-link">
+                                        <a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goAddProjectFourPage&amp;id=7ee01511e8994a3da8f63347f1e5735e">提交课题 2020-HIRFL-PT-000144</a>
+                                    </p>
+                                    <p class="text text-link">
+                                        <a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goAddProjectFourPage&amp;id=98daf44c40484ad38697bbcb6d6ee582">提交课题 2020-SSRF-PT-012861</a>
+                                    </p>
+                                    <p class="text text-link">
+                                        <a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goAddProjectFourPage&amp;id=1d804f6b46dc47798ad9721b6e5a5e1d">提交课题 2019-BEPC-PT-003548</a>
+                                    </p>
+                                    <p class="text text-link">
+                                        <a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goAddProjectFourPage&amp;id=ace18e100bff4402a622c09a8915a546">提交课题 2019-SG-Ⅱ-ZD-00011</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-top: 10px; padding-left: 30px; background-color: #f3f7f9; padding-right: 10px; padding-bottom: 10px; height: 50%;">
+                            <div class="layout">
+					<div class="layout-title">
+						<span><img src="en/images/icon-contact.png" height="30" width="30" alt=""></span>
+							<h3>联系方式</h3>
+					</div>
+					<div class="layout-con con-list">
+							<p class="text text-s">北京正负电子对撞机</p>
+							<p class="text text-s"><span>何伟  hew@ihep.ac.cn	   010-88235027</span></p>
+							<p class="text text-s">-----------------------------------------------------------------</p>						
+					</div>
+				</div>
+                        </div>
+                    </div>
+                    <div style="display: inline-block; float: right; width: 50%; height: inherit;">
+                        <div style="padding-top: 10px; padding-left: 30px; background-color: #f3f7f9; padding-right: 10px; padding-bottom: 10px; height: 50%;">
+                            <div class="layout">
+					<div class="layout-title">
+						<span><img src="en/images/icon-links.png" height="30" width="30" alt=""></span>				
+							<h3>常用链接</h3>
+					</div>
+					<div class="layout-con links-list">
+
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngProjectController.do?addproject">
+									新增课题申请
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngProjectController.do?goproject">
+									我的课题列表
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngSessionsController.do?addsessions">
+									新增实验申请
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngSessionsController.do?gosessions">
+									我的实验列表
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngResultController.do?goAddResult">
+								新增成果申请
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzEngResultController.do?goResultList">
+								我的成果列表
+							
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/dzzSsFileController.do?dzzSsFileUser" target="_blank">
+								安全培训资料
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn:80/oaTestingTestController.do?oaTestingTest" target="_blank">
+								参加安全考试
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a href="http://lssf.cas.cn/wx/info/index.html" target="_blank">
+								<font color="red">常见问题Q&amp;A</font>
+							</a>
+						</p>
+						<p class="text text-link text-iblock">
+							<a onclick="send_submit();" "="" target="_blank">
+							仪器共享管理平台
+							</a>
+						</p>
+				</div>	
+				</div>
+                        </div>
+                        <div style="padding-top: 10px; padding-left: 30px; background-color: #f3f7f9; padding-right: 10px; padding-bottom: 10px; height: 50%;">
+                            <div class="layout">
+					<div class="layout-title">
+						<span><img src="en/images/icon-introduction.png" height="30" width="30" alt=""></span>							
+								<h3>通知公告</h3>					
+					</div>
+					<div class="layout-con platform-list"> 						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816e014a86016e01799999007f');">兰州重离子加速器（HIRFL）国家实验室2020年度束流申请通知</a>
+							</p>						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816decb10e016ded98144b0bad');">兰州重离子加速器（HIRFL）国家实验室2020年度束流申请通知</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816b788076016b791e693201f6');">散裂中子源普通课题征集</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816b733f10016b73ad06df01bf');">北京同步辐射装置2019年用户学术年会 会议通知</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816b45e2f9016b4930deb603b7');">【20190612】合肥光源2019年用户学术年会通知（第一轮）</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816b25ced9016b2b9af05009eb');">【20190606】BSRF 2019年6-7月份专用光机时申请通知</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816b070e44016b07ebe8030298');">【20190530】新版用户中心已集成培训资料和安全考试功能</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816afdb0e7016b019dcb2f0686');">【提醒】关于用户密码带特殊字符无法登录的说明</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816afdb0e7016b0170f8f305dd');">【提醒】旧版未提交课题需在新版重新录入</a>
+							</p>
+						
+							<p class="text text-link">
+								<a class="comment" onclick="javascript:findkfgg('ff8080816afbd008016afc3b34e10288');">【20190528】重大科技基础设施微信公众号推出公告</a>
+							</p>
+						
+					</div>
+				</div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

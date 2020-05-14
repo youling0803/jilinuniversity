@@ -10,3 +10,25 @@ ul.title-select>li>ul.title-option{background-color: #3383b4;padding: 10px;color
 ul.title-select>li>ul.title-option>li{display:inline-block;padding: 5px 8px;}
 ul.title-select>li>ul.title-option>li>a,ul.title-select>li>ul.title-option>li>a:focus{color: #fff;text-decoration: none;cursor: pointer;white-space: nowrap;}
 ul.title-select>li>ul.title-option>li>a:hover{color: #e5a377;text-decoration: none;}
+
+.person-list-con{padding:0 30px;min-height:600px;}
+table.person-table{width: 100%;border-left: 1px solid #ddd;text-align: center;}
+table.person-table tr>th{border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;background-color: #469abf;font-weight: normal;color: #fff;padding: 12px 6px;white-space: nowrap;}
+table.person-table tr>th.table-sort{cursor: pointer;}
+table.person-table tr>th.table-sort:hover{background-color: #004f79;}
+table.person-table tr>th>span{display: inline-block;width: 19px;height: 19px;margin-left: 5px;vertical-align: middle;}
+table.person-table tr>td{border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:12px;}
+table.person-table tr>td>a,table.person-table tr>td>a:focus{color: #3383b4;font-weight: bold;text-decoration:none;}
+table.person-table tr>td>a:hover{color: #3383b4;font-weight: bold;text-decoration: underline;}
+table.person-table tr>td>a.btn-default,table.person-table tr>td>a.btn-default:focus{padding: 4px;border:1px solid #dedede;background: -webkit-linear-gradient(180deg,#fbfbfb, #d8d8d8); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(180deg,#fbfbfb, #d8d8d8); /* Opera 11.1 - 12.0 */background: -moz-linear-gradient(180deg,#fbfbfb, #d8d8d8); /* Firefox 3.6 - 15 */background: linear-gradient(180deg,#fbfbfb, #d8d8d8); /* 标准的语法 */ margin: 0 2px;cursor: pointer;color: #333;text-decoration:none;font-weight: normal;}
+  table.person-table tr>td>a.btn-default:hover{background: -webkit-linear-gradient(180deg,#fbfbfb, #fbfbfb); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(180deg,#fbfbfb, #fbfbfb); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(180deg,#fbfbfb, #fbfbfb); /* Firefox 3.6 - 15 */background: linear-gradient(180deg,#fbfbfb, #fbfbfb); /* 标准的语法 */color: #333;text-decoration:none;font-weight: normal;}
+.personal-page{margin-top: 30px;}
+.personal-page>p{display: inline-block;margin-right: 50px;}
+.personal-page>p>span{font-weight: bold;}
+.personal-page>a,.personal-page>a:focus{padding: 4px 10px;background-color: #c6d9e2;color: #3383b4;text-decoration: underline;}
+.personal-page>a:hover{text-decoration: none;color: #3383b4;}
+.personal-page>a.prev{border-radius: 4px 0 0 4px;}
+.personal-page>a.next{border-radius: 0 4px 4px 0;}
+.personal-page>span.current{padding: 4px 8px;background-color:#3383b4;margin: 0 10px;color: #fff;}

@@ -83,3 +83,11 @@ aside {
     color:#f4f8f9;
     font-family:'Microsoft YaHei';
 }
+
+.layout{background-color: #fff;border:1px solid #e7e7e7;min-height: 280px;}
+.layout:hover{box-shadow: 0 4px 6px rgba(0,0,0,0.2);}
+div.layout-title{font-size: 20px;height: 66px;}
+div.layout-title>h3{display: inline-block;vertical-align: top;height: 66px;line-height: 66px;}
+div.layout-title>span{display: inline-block;width: 70px;height: 66px;text-align: center;overflow: hidden;vertical-align: top;}
+div.layout-title>span>img{margin-top: 18px;}
+div.layout-con{padding-left: 70px;margin-bottom: 20px;padding-right:20px;overflow: hidden;margin-right: 20px;}
