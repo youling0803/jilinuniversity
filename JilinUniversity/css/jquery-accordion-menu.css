@@ -14,7 +14,8 @@ body {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    width:100%;
+    text-align:center;
 }
 
 .icon {
@@ -33,7 +34,7 @@ body {
 }
 
 .jquery-accordion-menu {
-    min-width: 202px;
+    min-width: 100px;
     float: left;
     position: relative;
 }
@@ -65,12 +66,12 @@ body {
 /* li高度 */
 
 .jquery-accordion-menu ul li a {
-    width: 100%;
+    width: 50%;
     padding: 10px 10px;
     float: left;
     text-decoration: none;
-    color: black;
-    font-size: 20px;  
+    color:#3486b8;
+    font-size:16px;  
     white-space: nowrap;
     position: relative;
     overflow: hidden;
@@ -82,15 +83,15 @@ body {
 
 .jquery-accordion-menu > ul > li > a {
     border: solid 1px #ccc;
-    border-radius:3px;
+   /* border-radius:3px;*/
 }
 
 .jquery-accordion-menu ul li a i {
     width: 34px;
     float: left;
-    line-height: 18px;
-    font-size: 16px;
-    text-align: left
+   /* line-height: 18px;
+    font-size: 16px;*/
+    text-align: center;
 }
 
 .jquery-accordion-menu .submenu-indicator {
@@ -99,8 +100,8 @@ body {
     position: absolute;
     line-height: 19px;
     color: black;
-    font-size: 20px;
-    font-weight: bold;
+    /*font-size: 20px;
+    font-weight: bold;*/
     /*-o-transition: transform .3s linear;
     -moz-transition: transform .3s linear;
     -webkit-transition: transform .3s linear;
@@ -111,7 +112,7 @@ body {
 .jquery-accordion-menu ul ul.submenu .submenu-indicator {
     line-height: 16px;
     color: black;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .jquery-accordion-menu .submenu-indicator-minus > .submenu-indicator {
@@ -177,7 +178,7 @@ body {
     text-align: center;
     line-height: 18px;
     background: #f0f0f0;
-    border-radius: 100%
+    /*border-radius: 100%*/
 }
 
 .jquery-accordion-menu ul ul.submenu li .jquery-accordion-menu-label {
@@ -244,35 +245,35 @@ body {
 }
 
 .red.jquery-accordion-menu > ul > li.active > a {
-    background-color: #27a9e3;
+    background-color:#3383b4;
     color: #fff;
     outline: medium;
-    border-radius: 5px;
-    font-weight: 800;
-    border-color: #fff;
+    /* border-radius: 5px;
+   font-weight: 800;*/
+    border-color:#3383b4;
 }
 
     .red.jquery-accordion-menu > ul > li.active > a:hover {
-        background-color: #15b9f7;
+        background-color:#3383b4;
         color: #fff;
         outline: medium;
-        border-radius: 5px;
-        border-color: #fff;
+       /* border-radius: 5px;*/
+        border-color:#3383b4;
         font-weight: normal;
     }
 
 .jquery-accordion-menu > ul > li:hover > a {
-    background-color: #15b9f7;
+    background-color: #3383b4;
     color: #fff;
     outline: medium;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     border-color: #fff;
 }
 
 
 
 .red.jquery-accordion-menu > ul > li > ul > li.active > a {
-    background-color: #f3760c;
+    background-color:#3383b4;
     color: #fff;
     outline: medium;
     border-color: #fff;
@@ -281,7 +282,7 @@ body {
 }
 
     .red.jquery-accordion-menu > ul > li > ul > li.active > a:hover {
-        background-color: #fb9634;
+        background-color: #3383b4;
         color: #fff;
         outline: medium;
         border-color: #fff;
@@ -290,7 +291,7 @@ body {
     }
 
 .red.jquery-accordion-menu > ul > li > ul > li:hover > a {
-    background-color:#fb9634;
+    background-color:#3383b4;
     color: #fff;
     outline: medium;
     border-color: #fff;

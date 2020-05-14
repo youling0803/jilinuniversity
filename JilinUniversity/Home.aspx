@@ -97,7 +97,7 @@
             <a href="Login.aspx" class="rightup" style="color:#FFFFFF; margin-top:2.3%;font-size:16px;=left:88%;">注销</a>
         </div>
         <div>
-            <aside id="box_left" style="top:80px;">
+            <aside id="box_left" style="top:80px;border:1px solid #ccc">
                <!-- <div class="picture">
                     <img src="image/background.jpg" style="width: 80%; height: 80%; margin-left: 10%;" />
                     <div class="username" style="text-align: center">

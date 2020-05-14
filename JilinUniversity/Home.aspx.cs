@@ -86,7 +86,7 @@ namespace JilinUniversity
                 {
                     span[i] = string.Format("<li><a href=\'{0}\' onclick=\"addTab(\'{1}\',\'{2}\')\">",
                                Page[i].url, Page[i].menuName, Page[i].url);
-                    span[i] += @"<img src='image/icon1.png' class='icon' />";
+                    span[i] += @"<img src='image/icon.png' class='icon' left=‘5%’ />";
                     span[i] += Page[i].menuName;
                     span[i] += @"</a>";
                 }
