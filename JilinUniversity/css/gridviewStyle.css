@@ -22,10 +22,8 @@
     padding: 4px 2px;
     background:#eff1f0;
     /*background: #171c22 url(grd_head.png) repeat-x top;*/
-    border-top: solid 3px #27a9e3;
-    border-left: solid 1px #c1c1c1;
-     border-right: solid 1px #c1c1c1;
-      border-bottom: solid 1px #c1c1c1;
+    border:solid 1px #c1c1c1;
+    
 
 }
 .mGrid .alt { background: red; }

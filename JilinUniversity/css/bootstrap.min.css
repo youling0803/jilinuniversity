@@ -3510,8 +3510,8 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 
 .btn-info {
     color: #fff;
-    background-color: #5bc0de;
-    border-color: #46b8da
+    background-color:#3383b4;
+    border-color: #FFFFFF;
 }
 
 .btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open > .dropdown-toggle.btn-info {

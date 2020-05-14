@@ -58,7 +58,7 @@
 	</script>
 </head>
 <body>
-    <div class="content_top">
+    <div class="content_top" >
         <div class="position">
             <div class="position_content">
                 <i class="glyphicon glyphicon-home" style="cursor: pointer;"></i>
@@ -81,7 +81,7 @@
             <div class="functionbtn">
                 <div>
                 <span>
-                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddResult">
+                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddResult" style="background-color:#3383b4;border:1px solid #3383b4;">
                         新增成果
                     <span class="glyphicon glyphicon-plus"></span>
                     </button>
@@ -89,13 +89,13 @@
             </div>
             <div>
                 <%--可能会修改，实现难度较大--%>
-                <div class="person-list-title">
+                <div class="person-list-title" style="background-color:#3383b4; margin-top:1.1%;">
                 </div>
                 <asp:GridView ID="GridViewDetection" runat="server" AllowPaging="True" AutoGenerateColumns="False" Width="100%" PageSize="5" Font-Size="10pt" CssClass="mGrid"
                     DataKeyNames="ID"
                     OnDataBound="GridViewDetection_DataBound"
                     OnRowDataBound="GridViewDetection_RowDataBound"
-                    OnPageIndexChanging="GridViewDetection_PageIndexChanging">
+                    OnPageIndexChanging="GridViewDetection_PageIndexChanging" BorderColor="#C1C1C1">
                     <%-- 样式设定 --%>
                     <AlternatingRowStyle BackColor="#F9F9F9" HorizontalAlign="Left" VerticalAlign="Middle" />
                     <Columns>
@@ -164,10 +164,10 @@
 
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
-                                <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>
-                                <asp:LinkButton ID="LBcheck" runat="server" CausesValidation="False" CommandName="Select" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="提交"></asp:LinkButton>
-                                <asp:LinkButton ID="LBdelete" runat="server" CausesValidation="False" CommandName="Offdata" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="删除"></asp:LinkButton>
-                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="复制课题"></asp:LinkButton>
+                                <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>
+                                <asp:LinkButton ID="LBcheck" runat="server" CausesValidation="False" CommandName="Select" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="提交"></asp:LinkButton>
+                                <asp:LinkButton ID="LBdelete" runat="server" CausesValidation="False" CommandName="Offdata" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="删除"></asp:LinkButton>
+                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="复制课题"></asp:LinkButton>
                             </ItemTemplate>
                             <ControlStyle Width="56px" />
                             <ItemStyle ForeColor="#0066CD" HorizontalAlign="Center" Width="250px" />
