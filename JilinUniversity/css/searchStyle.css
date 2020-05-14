@@ -1,6 +1,6 @@
 ﻿body {
 }
-.person-list-title{height: 50px;padding: 0 15px;background-color: #1772b4;box-shadow: 0 -10px 10px rgba(0,0,0,0.3) inset;}
+.person-list-title{height: 50px;padding: 0 15px;background-color: #1772b4;/*box-shadow: 0 -10px 10px rgba(0,0,0,0.3) inset;*/}
 .person-list-title>select{padding:4px;margin-top: 10px;}
 .person-list-title>span{color: #fff;float: left;margin-right: 10px;line-height: 50px;}
 ul.title-select>li{display: inline-block;float: left;margin: 0 10px;position: relative;}

@@ -80,7 +80,7 @@
             <%--<input type="button" id="hiddenbuttonOffdata" runat="server" onserverclick="hiddenbuttonOffdata_Click" style="display: none" />--%>
             <div class="functionbtn">
                 <span>
-                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddTopic">
+                    <button type="button" class="btn btn-info btnpos" runat="server" id="add" onchange="jump(this);" onserverclick="NewAddTopic" style="background-color:#3383b4;border:1px solid #3383b4;">
                         新增课题申请
                     <span class="glyphicon glyphicon-plus"></span>
                     </button>
@@ -88,7 +88,7 @@
             </div>
             <div>
                 <%--可能会修改，实现难度较大--%>
-                <div class="person-list-title">
+                <div class="person-list-title" style="background-color:#3383b4;">
                     <span>查询条件</span>
                     <ul class="title-select">
                         <li class="title-navs">
@@ -121,7 +121,7 @@
                     DataKeyNames="ID"
                     OnDataBound="GridViewDetection_DataBound"
                     OnRowDataBound="GridViewDetection_RowDataBound"
-                    OnPageIndexChanging="GridViewDetection_PageIndexChanging">
+                    OnPageIndexChanging="GridViewDetection_PageIndexChanging" BorderColor="#C1C1C1">
                     <%-- 样式设定 --%>
                     <AlternatingRowStyle BackColor="#F9F9F9" HorizontalAlign="Left" VerticalAlign="Middle" />
                     <Columns>
@@ -217,10 +217,10 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
-                                <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>
-                                <asp:LinkButton ID="LBcheck" runat="server" CausesValidation="False" CommandName="Select" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="提交"></asp:LinkButton>
-                                <asp:LinkButton ID="LBdelete" runat="server" CausesValidation="False" CommandName="Offdata" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="删除"></asp:LinkButton>
-                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#0066CD" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="复制课题"></asp:LinkButton>
+                                <asp:LinkButton ID="LBedit" runat="server" CausesValidation="False" CommandName="Edit" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="编辑"></asp:LinkButton>
+                                <asp:LinkButton ID="LBcheck" runat="server" CausesValidation="False" CommandName="Select" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="提交"></asp:LinkButton>
+                                <asp:LinkButton ID="LBdelete" runat="server" CausesValidation="False" CommandName="Offdata" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="删除"></asp:LinkButton>
+                                <asp:LinkButton ID="LBdownload" runat="server" CausesValidation="False" CommandName="Download" ForeColor="#3486B8" CommandArgument='<%# Eval("ID")%>' OnCommand="LBdownload_Command" Text="复制课题"></asp:LinkButton>
                             </ItemTemplate>
                             <ControlStyle Width="56px" />
                             <ItemStyle ForeColor="#0066CD" HorizontalAlign="Center" Width="250px" />

@@ -113,7 +113,7 @@
             </aside>
             <section class="auto-style2" id="box_right">
                 <div class="con">
-                    <div id="tt" class="easyui-tabs">
+                    <div id="tt" class="easyui-">
                         <div title="主页">
                         </div>
                     </div>
