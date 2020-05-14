@@ -116,8 +116,10 @@ $(function () {
         var a = $(this).parents().hasClass("submenu");
         var b = $(this).parents().parents().parents().hasClass("submenu");
         if (!a && !b) {
+            $("#demo_list li.active").children("a").children("img").attr("src", "../image/icon.png");
             $("#demo_list li.active").removeClass("active");
             $(this).addClass("active");
+            $(this).children("a").children("img").attr("src", "../image/icon2.png");
         }
         else if (a && !b) {
             $("#demo_list li ul li.active").removeClass("active");

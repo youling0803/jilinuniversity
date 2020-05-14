@@ -19,7 +19,7 @@ body {
 }
 
 .icon {
-    float: left;
+    /*float: left;*/
     margin-top: 0px;
     margin-right: 12px;
     padding: 0;
@@ -245,7 +245,7 @@ body {
 }
 
 .red.jquery-accordion-menu > ul > li.active > a {
-    background-color:#3383b4;
+    background-color:#27a9e3;
     color: #fff;
     outline: medium;
     /* border-radius: 5px;
@@ -254,16 +254,16 @@ body {
 }
 
     .red.jquery-accordion-menu > ul > li.active > a:hover {
-        background-color:#3383b4;
+        background-color:#27a9e3;
         color: #fff;
         outline: medium;
        /* border-radius: 5px;*/
-        border-color:#3383b4;
+        border-color:#27a9e3;
         font-weight: normal;
     }
 
 .jquery-accordion-menu > ul > li:hover > a {
-    background-color: #3383b4;
+    background-color: #27a9e3;
     color: #fff;
     outline: medium;
     /*border-radius: 5px;*/
@@ -273,7 +273,7 @@ body {
 
 
 .red.jquery-accordion-menu > ul > li > ul > li.active > a {
-    background-color:#3383b4;
+    background-color:#27a9e3;
     color: #fff;
     outline: medium;
     border-color: #fff;
@@ -282,7 +282,7 @@ body {
 }
 
     .red.jquery-accordion-menu > ul > li > ul > li.active > a:hover {
-        background-color: #3383b4;
+        background-color: #27a9e3;
         color: #fff;
         outline: medium;
         border-color: #fff;
@@ -291,7 +291,7 @@ body {
     }
 
 .red.jquery-accordion-menu > ul > li > ul > li:hover > a {
-    background-color:#3383b4;
+    background-color:#27a9e3;
     color: #fff;
     outline: medium;
     border-color: #fff;
